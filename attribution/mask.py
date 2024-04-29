@@ -108,7 +108,7 @@ class Mask:
         self.T, self.N_features = X.shape
         self.loss_function = loss_function
         if target is None:
-            self.Y_target = f(X)
+            self.Y_target = f.forward(X)
         else:
             self.Y_target = target
 
